@@ -1,0 +1,99 @@
+/* iPhone 13 mini: 375x812px */
+.team-search-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+}
+
+.team-search-container {
+    width: 100%;
+    text-align: center;
+}
+
+.team-search-container h1 {
+    font-size: 28px;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.team-search-subtitle {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 32px;
+    font-size: 15px;
+}
+
+.team-search-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 24px;
+}
+
+.action-btn {
+    background: white;
+    border: none;
+    border-radius: 16px;
+    padding: 22px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-align: left;
+}
+
+.action-btn:active {
+    transform: scale(0.98);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.btn-icon {
+    font-size: 36px;
+    flex-shrink: 0;
+}
+
+.action-btn h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.action-btn p {
+    font-size: 13px;
+    color: #666;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+    margin-bottom: 24px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.checkbox-label input {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.btn-start {
+    padding: 16px 40px;
+    background: white;
+    color: #667eea;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-start:active {
+    transform: scale(0.98);
+}

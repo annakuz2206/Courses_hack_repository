@@ -1,0 +1,166 @@
+.hackathon-page {
+    min-height: 100vh;
+    padding: 32px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hackathon-container {
+    width: 100%;
+    text-align: center;
+}
+
+.hackathon-container h1 {
+    font-size: 28px;
+    color: #000000;
+    margin-bottom: 8px;
+}
+
+.hackathon-subtitle {
+    color: #000000;
+    margin-bottom: 32px;
+    font-size: 15px;
+}
+
+.hackathon-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.hackathon-card {
+    background: #ffffff;
+    border: 2px solid #000000;
+    padding: 20px;
+    cursor: pointer;
+    position: relative;
+}
+
+.hackathon-card:active {
+    background: #000000;
+    color: #ffffff;
+}
+
+.hackathon-card.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.hackathon-card h3 {
+    font-size: 19px;
+    color: #000000;
+    margin-bottom: 12px;
+}
+
+.hackathon-card:active h3 {
+    color: #ffffff;
+}
+
+.hackathon-info {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    color: #000000;
+    font-size: 13px;
+}
+
+.hackathon-card:active .hackathon-info {
+    color: #ffffff;
+}
+
+.badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #000000;
+    color: #ffffff;
+    padding: 4px 10px;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 16px;
+}
+
+.modal-content {
+    background: #ffffff;
+    border: 2px solid #000000;
+    padding: 28px 24px;
+    width: 100%;
+    max-width: 375px;
+    position: relative;
+}
+
+.modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+    background: #ffffff;
+    border: 2px solid #000000;
+    font-size: 18px;
+    color: #000000;
+    cursor: pointer;
+}
+
+.modal-close:active {
+    background: #000000;
+    color: #ffffff;
+}
+
+.modal-content h2 {
+    font-size: 24px;
+    color: #000000;
+    margin-bottom: 16px;
+    padding-right: 32px;
+}
+
+.modal-info {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #000000;
+    font-size: 14px;
+}
+
+.modal-description {
+    color: #000000;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    font-size: 15px;
+}
+
+.btn-participate {
+    width: 100%;
+    padding: 16px;
+    background: #000000;
+    color: #ffffff;
+    border: 2px solid #000000;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-participate:active {
+    background: #ffffff;
+    color: #000000;
+}

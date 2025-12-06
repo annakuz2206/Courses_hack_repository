@@ -1,0 +1,167 @@
+.settings-page {
+    min-height: 100vh;
+    padding: 16px;
+}
+
+.settings-container {
+    width: 100%;
+    background: #ffffff;
+    border: 2px solid #000000;
+    padding: 24px;
+}
+
+.settings-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.back-btn {
+    background: #ffffff;
+    border: 2px solid #000000;
+    padding: 10px 18px;
+    font-size: 14px;
+    cursor: pointer;
+    color: #000000;
+}
+
+.back-btn:active {
+    background: #000000;
+    color: #ffffff;
+}
+
+.settings-header h2 {
+    font-size: 22px;
+    color: #000000;
+}
+
+.settings-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-field label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.form-field input,
+.form-field textarea {
+    padding: 14px 16px;
+    border: 2px solid #000000;
+    font-size: 15px;
+    background: #ffffff;
+    color: #000000;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+    border: 2px solid #000000;
+    outline: none;
+}
+
+.form-field textarea {
+    resize: vertical;
+    font-family: inherit;
+    min-height: 100px;
+}
+
+.save-btn {
+    padding: 16px;
+    background: #000000;
+    color: #ffffff;
+    border: 2px solid #000000;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+.save-btn:active {
+    background: #ffffff;
+    color: #000000;
+}
+
+.settings-tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+    border-bottom: 2px solid #000000;
+}
+
+.settings-tabs .tab {
+    background: none;
+    border: none;
+    padding: 12px 20px;
+    font-size: 15px;
+    color: #000000;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+}
+
+.settings-tabs .tab.active {
+    color: #000000;
+    border-bottom-color: #000000;
+    font-weight: 600;
+}
+
+.settings-tabs .tab:active {
+    transform: scale(0.98);
+}
+
+.teams-section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.teams-section h3 {
+    font-size: 18px;
+    color: #000000;
+    margin-bottom: 8px;
+}
+
+.team-card {
+    background: #ffffff;
+    border: 2px solid #000000;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.team-card h4 {
+    font-size: 16px;
+    color: #000000;
+}
+
+.team-card p {
+    font-size: 14px;
+    color: #000000;
+}
+
+.edit-team-btn {
+    margin-top: 8px;
+    padding: 12px;
+    background: #000000;
+    color: #ffffff;
+    border: 2px solid #000000;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.edit-team-btn:active {
+    background: #ffffff;
+    color: #000000;
+}
