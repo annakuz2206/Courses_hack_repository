@@ -5,7 +5,17 @@
 
 ## 🚀 Запуск
 
+1. Установи Node.js
+- Скачай с nodejs.org версию 18 или выше
+
+2. Скачай проект
 ```bash
+   git clone https://github.com/annakuz2206/Courses_hack_repository.git
+```
+3. Установи зависимости, установи и запускай
+
+```bash
+cd Courses_hack_repository
 npm install
 npm run dev
 ```
