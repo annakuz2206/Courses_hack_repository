@@ -1,0 +1,469 @@
+/* Главный контейнер */
+.app-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    padding: 24px;
+    box-sizing: border-box;
+    overflow: visible;
+    flex-grow: 1;
+    min-height: 0;
+    position: relative;
+}
+
+/* Хедер с заголовком и кнопкой фильтров */
+.search-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+/* Заголовок страницы поиска */
+.search-page-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin: 0;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* Кнопка фильтров */
+.filter-button {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.filter-button:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-1px);
+}
+
+.filter-button svg {
+    flex-shrink: 0;
+}
+
+.filter-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px;
+    height: 20px;
+    padding: 0 6px;
+    background: #8B5CF6;
+    border-radius: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+
+/* Обертка для карточки и кнопок */
+.card-wrapper {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    min-height: 0;
+}
+
+/* Главная карточка */
+.main-card {
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    border-radius: 24px;
+    overflow: visible;
+    background: white;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Верхняя секция - Фотография (60-65% высоты) */
+.photo-section {
+    position: relative;
+    width: 100%;
+    height: 62%;
+    flex-shrink: 0;
+    overflow: hidden;
+    z-index: 2;
+    border-radius: 24px 24px 0 0;
+}
+
+.user-photo-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Темный градиент поверх фото */
+.photo-gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+    pointer-events: none;
+}
+
+/* Текст на фото (левый нижний угол) */
+.photo-text-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 2;
+}
+
+.user-name-overlay {
+    color: white;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0 0 4px 0;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.user-role-overlay {
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+    opacity: 0.95;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Кнопки свайпа (привязаны к краям экрана) */
+.swipe-button-external {
+    position: absolute;
+    top: calc(40% - 10px);
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 3px solid rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.swipe-button-left {
+    left: -20px;
+}
+
+.swipe-button-right {
+    right: -20px;
+}
+
+.swipe-button-external:hover {
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+}
+
+.swipe-button-external:active {
+    transform: translateY(-50%) scale(1.15);
+    background: rgba(170, 0, 255, 0.4);
+    border-color: rgba(170, 0, 255, 0.6);
+}
+
+/* Нижняя секция - Информация (белый фон, скругленные углы сверху) */
+.info-section {
+    flex: 1;
+    background: white;
+    padding: 24px 0 20px 0;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    min-height: 0;
+    border-radius: 32px 32px 24px 24px;
+    margin-top: -24px;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.08);
+    width: 100%;
+}
+
+.info-section::-webkit-scrollbar {
+    display: none;
+}
+
+/* Статус (маджента/бордо) */
+.status-badge {
+    color: #DC2626;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    display: inline-block;
+    padding: 0 20px;
+}
+
+/* Информационные блоки */
+.info-block {
+    margin-bottom: 16px;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.info-title {
+    color: #8B5CF6;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+}
+
+.info-description {
+    color: #374151;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Теги навыков */
+.skills-tags {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    align-items: stretch;
+}
+
+.skill-tag {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(139, 92, 246, 0.1);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    color: #8B5CF6;
+    padding: 12px 20px;
+    border-radius: 16px;
+    font-size: 14px;
+    font-weight: 500;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Сообщение "Больше анкет нет" */
+.no-more-cards {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1001;
+    width: 80%;
+}
+
+.no-more-text {
+    font-size: 28px;
+    font-weight: 800;
+    color: #AA00FF;
+    margin: 0 0 12px 0;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.no-more-subtext {
+    font-size: 18px;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin: 0;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Модальное окно фильтров */
+.filter-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    padding: 20px;
+}
+
+.filter-modal {
+    background: rgba(30, 20, 50, 0.95);
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(139, 92, 246, 0.3);
+    border-radius: 24px;
+    padding: 24px;
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.filter-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter-modal-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.filter-close-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.filter-close-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+/* Список ролей */
+.filter-roles-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.filter-role-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    width: 100%;
+    text-align: left;
+}
+
+.filter-role-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(139, 92, 246, 0.3);
+}
+
+.filter-role-item.selected {
+    background: rgba(139, 92, 246, 0.2);
+    border-color: rgba(139, 92, 246, 0.5);
+}
+
+.filter-role-checkbox {
+    width: 24px;
+    height: 24px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: #FFFFFF;
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+}
+
+.filter-role-item.selected .filter-role-checkbox {
+    background: #8B5CF6;
+    border-color: #8B5CF6;
+}
+
+.filter-role-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+/* Кнопки действий */
+.filter-modal-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.filter-clear-btn,
+.filter-apply-btn {
+    flex: 1;
+    padding: 14px;
+    border-radius: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+}
+
+.filter-clear-btn {
+    background: rgba(255, 255, 255, 0.1);
+    color: #FFFFFF;
+}
+
+.filter-clear-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.filter-apply-btn {
+    background: #8B5CF6;
+    color: #FFFFFF;
+}
+
+.filter-apply-btn:hover {
+    background: #7C3AED;
+    transform: translateY(-2px);
+}

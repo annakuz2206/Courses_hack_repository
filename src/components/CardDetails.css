@@ -1,0 +1,117 @@
+.card-details-page {
+    min-height: 100vh;
+    padding: 16px;
+}
+
+.card-details-container {
+    width: 100%;
+}
+
+.back-btn {
+    background: #ffffff;
+    border: 2px solid #000000;
+    padding: 10px 18px;
+    font-size: 14px;
+    cursor: pointer;
+    color: #000000;
+}
+
+.back-btn:active {
+    background: #000000;
+    color: #ffffff;
+}
+
+.card-details-content {
+    background: #ffffff;
+    border: 2px solid #000000;
+    padding: 28px 24px;
+    margin-top: 16px;
+}
+
+.card-details-header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.card-details-header h1 {
+    font-size: 26px;
+    color: #000000;
+}
+
+.card-section {
+    margin-bottom: 22px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #000000;
+}
+
+.card-section:last-of-type {
+    border-bottom: none;
+}
+
+.card-section h3 {
+    font-size: 17px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.card-section p {
+    color: #000000;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    background: #000000;
+    color: #ffffff;
+    padding: 8px 14px;
+    font-size: 13px;
+    font-weight: 600;
+    border: 2px solid #000000;
+}
+
+.tag-skill {
+    background: #ffffff;
+    color: #000000;
+    padding: 8px 14px;
+    font-size: 13px;
+    border: 2px solid #000000;
+}
+
+.members-list {
+    list-style: none;
+    padding: 0;
+}
+
+.members-list li {
+    padding: 10px 0;
+    color: #000000;
+    border-bottom: 1px solid #000000;
+    font-size: 14px;
+}
+
+.members-list li:last-child {
+    border-bottom: none;
+}
+
+.btn-like {
+    width: 100%;
+    padding: 16px;
+    background: #000000;
+    color: #ffffff;
+    border: 2px solid #000000;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 16px;
+}
+
+.btn-like:active {
+    background: #ffffff;
+    color: #000000;
+}

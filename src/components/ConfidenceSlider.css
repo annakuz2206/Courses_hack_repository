@@ -1,0 +1,215 @@
+/* Модальное окно */
+.confidence-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.confidence-modal {
+    background: #000000;
+    border: 1px solid rgba(174, 0, 255, 0.3);
+    border-radius: 20px;
+    padding: 30px 25px;
+    max-width: 90%;
+    width: 320px;
+    box-shadow: 0 20px 60px rgba(174, 0, 255, 0.3);
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.confidence-slider-container {
+    width: 100%;
+}
+
+.confidence-title {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 29px;
+    color: #AE00FF;
+    margin: 0 0 20px 0;
+}
+
+.role-indicator {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+    padding: 8px 12px;
+    background: rgba(174, 0, 255, 0.1);
+    border: 1px solid rgba(174, 0, 255, 0.3);
+    border-radius: 8px;
+    width: fit-content;
+}
+
+.role-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: #FFFFFF;
+    font-weight: 500;
+}
+
+.slider-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.slider-track-container {
+    flex: 1;
+    position: relative;
+}
+
+.confidence-range {
+    width: 100%;
+    height: 12px;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Track для WebKit (Chrome, Safari) */
+.confidence-range::-webkit-slider-track {
+    width: 100%;
+    height: 12px;
+    border-radius: 10px;
+    background: transparent;
+}
+
+/* Thumb для WebKit */
+.confidence-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(174, 0, 255, 0.5),
+        0 0 20px rgba(174, 0, 255, 0.3);
+    transition: all 0.2s ease;
+    /* Увеличенная область касания для мобильных */
+    position: relative;
+}
+
+.confidence-range::-webkit-slider-thumb:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(174, 0, 255, 0.7),
+        0 0 30px rgba(174, 0, 255, 0.5);
+}
+
+.confidence-range::-webkit-slider-thumb:active {
+    transform: scale(1.05);
+}
+
+/* Track для Firefox */
+.confidence-range::-moz-range-track {
+    width: 100%;
+    height: 12px;
+    border-radius: 10px;
+    background: transparent;
+}
+
+/* Thumb для Firefox */
+.confidence-range::-moz-range-thumb {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 0 10px rgba(174, 0, 255, 0.5),
+        0 0 20px rgba(174, 0, 255, 0.3);
+    transition: all 0.2s ease;
+}
+
+.confidence-range::-moz-range-thumb:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(174, 0, 255, 0.7),
+        0 0 30px rgba(174, 0, 255, 0.5);
+}
+
+.confidence-range::-moz-range-thumb:active {
+    transform: scale(1.05);
+}
+
+/* Увеличенная область касания для мобильных устройств */
+@media (hover: none) and (pointer: coarse) {
+    .confidence-range::-webkit-slider-thumb {
+        width: 36px;
+        height: 36px;
+    }
+
+    .confidence-range::-moz-range-thumb {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+.percentage-display {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #AE00FF;
+    min-width: 45px;
+    text-align: right;
+    flex-shrink: 0;
+}
+
+.confirm-button {
+    width: 100%;
+    height: 44px;
+    background: rgba(170, 0, 255, 0.5);
+    border-radius: 12px;
+    border: none;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+.confirm-button:hover {
+    background: rgba(170, 0, 255, 0.7);
+    transform: translateY(-2px);
+}
+
+.confirm-button:active {
+    transform: translateY(0);
+}

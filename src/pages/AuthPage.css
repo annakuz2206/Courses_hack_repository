@@ -1,0 +1,360 @@
+@font-face {
+    font-family: 'NauryzRedKeds';
+    src: url('../assets/fonts/NauryzRedKeds.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Фон страницы - темный/черный, контент по центру */
+.auth-page {
+    min-height: 100%;
+    background: #000000;
+    padding: 0;
+    margin: 0;
+}
+
+/* Контейнер iPhone 13 mini - чисто черный фон */
+.auth-container {
+    position: relative;
+    width: 100%;
+    height: 812px;
+    background: #000000;
+    overflow: visible;
+}
+
+/* Заголовок "Cntrl+team" */
+.auth-title {
+    position: absolute;
+    width: 240px;
+    height: 44px;
+    top: 139px;
+    left: 68px;
+    font-family: 'NauryzRedKeds', sans-serif;
+    font-weight: 700;
+    font-size: 42.09px;
+    line-height: 100%;
+    color: #FFFFFF;
+    z-index: 10;
+}
+
+/* Контейнер-обертка для формы и пятен - пятна только внутри этого поля */
+.form-container {
+    position: absolute;
+    top: 253px;
+    left: 42px;
+    width: 292px;
+    height: 426px;
+    overflow: hidden;
+    border-radius: 17px;
+}
+
+/* Базовый класс для всех эллипсов */
+.aurora-ellipse {
+    position: absolute;
+    pointer-events: none;
+    border-radius: 50%;
+}
+
+/* --- ГРУППА 1 (Верхняя) --- */
+
+/* Большие фоновые пятна - низкий z-index, высокая прозрачность */
+.ellipse-68-top {
+    width: 257px;
+    height: 257px;
+    left: 143px;
+    top: -114px;
+    background: #A674B0;
+    filter: blur(19.6px);
+    opacity: 0.7;
+    mix-blend-mode: hard-light;
+    z-index: 1;
+}
+
+.ellipse-64-top {
+    width: 130px;
+    height: 113px;
+    left: 213px;
+    top: -34px;
+    background: #AF8FBD;
+    filter: blur(24px);
+    opacity: 0.65;
+    mix-blend-mode: hard-light;
+    z-index: 2;
+}
+
+.ellipse-66-top {
+    width: 194px;
+    height: 193px;
+    left: 192px;
+    top: -73px;
+    background: #FFBC69;
+    filter: blur(14.35px);
+    opacity: 0.75;
+    mix-blend-mode: hard-light;
+    z-index: 3;
+}
+
+/* Яркое акцентное пятно - высокий z-index */
+.ellipse-65-top {
+    width: 148px;
+    height: 154px;
+    left: 213px;
+    top: -50px;
+    background: #F0444A;
+    filter: blur(15.25px);
+    opacity: 0.8;
+    mix-blend-mode: hard-light;
+    z-index: 4;
+}
+
+/* --- ГРУППА 2 (Средняя) --- */
+
+.ellipse-68-mid {
+    width: 169.5px;
+    height: 222.5px;
+    left: -48.5px;
+    top: 213px;
+    background: #A674B0;
+    filter: blur(19.6px);
+    opacity: 0.7;
+    mix-blend-mode: hard-light;
+    z-index: 1;
+}
+
+.ellipse-64-mid {
+    width: 70.6px;
+    height: 73.87px;
+    left: 13.14px;
+    top: 265.3px;
+    background: #AF8FBD;
+    filter: blur(24px);
+    opacity: 1;
+    mix-blend-mode: hard-light;
+    z-index: 10;
+}
+
+.ellipse-66-mid {
+    width: 126.82px;
+    height: 126.16px;
+    left: -14.97px;
+    top: 239.8px;
+    background: #FFBC69;
+    filter: blur(14.35px);
+    opacity: 0.75;
+    mix-blend-mode: hard-light;
+    z-index: 3;
+}
+
+.ellipse-65-mid {
+    width: 96.75px;
+    height: 100.67px;
+    left: -1.24px;
+    top: 254.84px;
+    background: #F0444A;
+    filter: blur(15.25px);
+    opacity: 0.8;
+    mix-blend-mode: hard-light;
+    z-index: 4;
+}
+
+/* --- ГРУППА 3 (Нижняя) --- */
+
+.ellipse-68-bot {
+    width: 262.94px;
+    height: 232px;
+    left: 71.5px;
+    top: 388px;
+    background: #A674B0;
+    filter: blur(19.6px);
+    opacity: 0.3;
+    mix-blend-mode: hard-light;
+    z-index: 1;
+}
+
+.ellipse-64-bot {
+    width: 70.6px;
+    height: 73.87px;
+    left: 13.14px;
+    top: 365px;
+    background: #AF8FBD;
+    filter: blur(24px);
+    opacity: 0.4;
+    mix-blend-mode: hard-light;
+    z-index: 2;
+}
+
+.ellipse-67-bot {
+    width: 196px;
+    height: 196px;
+    left: 113px;
+    top: 395px;
+    background: #EF7BB7;
+    filter: blur(16.15px);
+    opacity: 0.35;
+    mix-blend-mode: hard-light;
+    z-index: 2;
+}
+
+.ellipse-66-bot {
+    width: 194px;
+    height: 193px;
+    left: 124px;
+    top: 404px;
+    background: #FFBC69;
+    filter: blur(14.35px);
+    opacity: 0.35;
+    mix-blend-mode: hard-light;
+    z-index: 3;
+}
+
+.ellipse-65-bot {
+    width: 148px;
+    height: 172px;
+    left: 145px;
+    top: 409px;
+    background: #F0444A;
+    filter: blur(15.25px);
+    opacity: 0.4;
+    mix-blend-mode: hard-light;
+    z-index: 4;
+}
+
+.ellipse-pink-bot {
+    width: 100px;
+    height: 100px;
+    left: 160px;
+    top: 430px;
+    background: #FFB6C1;
+    filter: blur(18px);
+    opacity: 0.7;
+    mix-blend-mode: hard-light;
+    z-index: 5;
+}
+
+/* Стеклянная карточка - поверх пятен */
+.glass-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 17px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Заголовок "Вход" */
+.auth-form-title {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+    margin-top: 16px;
+    margin-bottom: 0;
+    align-self: center;
+}
+
+/* Label "Код от бота" */
+.auth-form-label {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: #FFFFFF;
+    margin-bottom: 8px;
+    align-self: flex-start;
+}
+
+/* Frame 1321315507 - Input field */
+.auth-input {
+    width: 252px;
+    height: 45px;
+    background: rgba(0, 0, 0, 0.001);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 17px;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    padding: 0 16px;
+    outline: none;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.auth-input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.auth-input:focus {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Frame 1321315508 - Submit button */
+.auth-submit-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    width: 252px;
+    height: 38px;
+    background: rgba(170, 0, 255, 0.5);
+    border-radius: 17px;
+    border: none;
+    color: #FFFFFF;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+
+.auth-submit-btn:hover {
+    background: rgba(170, 0, 255, 0.7);
+    transform: translateY(-2px);
+}
+
+.auth-submit-btn:active {
+    transform: translateY(0);
+}
+
+/* Ссылка t.me/very_cool_hack_bot */
+.auth-bot-link {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: #AE00FF;
+    text-decoration: none;
+    margin-top: 48px;
+    transition: color 0.2s ease;
+    align-self: center;
+}
+
+.auth-bot-link:hover {
+    color: #D580FF;
+}
+
+/* Wrapper для формы - Flexbox layout */
+.auth-form-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    margin-top: 82px;
+}
