@@ -1,0 +1,41 @@
+.create-team-page {
+    min-height: 100vh;
+    background: #000000;
+    padding: 32px 16px;
+}
+
+.create-team-container {
+    max-width: 375px;
+    margin: 0 auto;
+}
+
+.back-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+    margin-bottom: 32px;
+    padding: 0;
+    transition: color 0.2s ease;
+}
+
+.back-btn:hover {
+    color: white;
+}
+
+.create-team-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.create-team-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
