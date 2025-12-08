@@ -1,0 +1,218 @@
+@font-face {
+    font-family: 'NauryzRedKeds';
+    src: url('../assets/fonts/NauryzRedKeds.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+.profile-view {
+    width: 100%;
+    max-width: 400px;
+    height: 812px;
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Контент профиля */
+.profile-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.profile-content::-webkit-scrollbar {
+    display: none;
+}
+
+.profile-content {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+/* Верхняя секция с цветным фоном */
+.colored-section {
+    padding: 40px 20px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+/* Информация о пользователе */
+.user-info-section {
+    text-align: center;
+}
+
+.user-name {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 700;
+    font-size: 28px;
+    color: #FFFFFF;
+    margin: 0 0 8px 0;
+}
+
+.user-role {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+/* Аватар (наполовину на цветном, наполовину на белом) */
+.profile-avatar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 140px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #FFFFFF;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Кнопки действий - круглые с эффектом жидкого стекла */
+.action-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    z-index: 20;
+    color: #FFFFFF;
+}
+
+.action-btn svg {
+    width: 20px;
+    height: 20px;
+    stroke: #FFFFFF;
+}
+
+.dislike-btn {
+    left: 60px;
+}
+
+.dislike-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-50%) scale(1.05);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.like-btn {
+    right: 60px;
+}
+
+.like-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-50%) scale(1.05);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.action-btn:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+/* Белый блок с информацией */
+.white-info-block {
+    background: #FFFFFF;
+    border-radius: 20px 20px 0 0;
+    padding: 80px 20px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+
+/* Общий заголовок секций */
+.section-title {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: #000000;
+    margin: 0 0 8px 0;
+}
+
+/* Навыки/Стек технологий */
+.skills-block {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-tag {
+    padding: 6px 12px;
+    background: rgba(174, 0, 255, 0.1);
+    border: 1px solid rgba(174, 0, 255, 0.3);
+    border-radius: 12px;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
+    color: #AE00FF;
+}
+
+/* Описание */
+.about-block {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.about-text {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333333;
+    margin: 0;
+}
+
+/* Telegram */
+.telegram-block {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.telegram-value {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #0088cc;
+    margin: 0;
+}

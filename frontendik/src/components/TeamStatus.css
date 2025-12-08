@@ -1,0 +1,126 @@
+.team-status-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+}
+
+.team-status-container {
+    width: 100%;
+}
+
+.team-status-container h1 {
+    font-size: 28px;
+    color: #000000;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.subtitle {
+    color: #000000;
+    margin-bottom: 32px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.choice-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.choice-btn {
+    background: #ffffff;
+    border: 2px solid #000000;
+    padding: 22px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.choice-btn:active {
+    background: #000000;
+    color: #ffffff;
+}
+
+.choice-btn h3 {
+    font-size: 18px;
+    color: #000000;
+    margin-bottom: 4px;
+}
+
+.choice-btn:active h3 {
+    color: #ffffff;
+}
+
+.choice-btn p {
+    font-size: 13px;
+    color: #000000;
+}
+
+.choice-btn:active p {
+    color: #ffffff;
+}
+
+.team-form-container,
+.choice-form-container {
+    background: #ffffff;
+    border: 2px solid #000000;
+    padding: 32px 24px;
+}
+
+.team-form-container h1,
+.choice-form-container h1 {
+    color: #000000;
+}
+
+.team-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.form-group input {
+    padding: 14px 16px;
+    border: 2px solid #000000;
+    font-size: 15px;
+    background: #ffffff;
+    color: #000000;
+}
+
+.form-group input:focus {
+    border: 2px solid #000000;
+    outline: none;
+}
+
+.btn-submit {
+    padding: 16px;
+    background: #000000;
+    color: #ffffff;
+    border: 2px solid #000000;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+.btn-submit:active {
+    background: #ffffff;
+    color: #000000;
+}

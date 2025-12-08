@@ -1,0 +1,728 @@
+/* Главный контейнер */
+.team-management-container {
+    width: 100%;
+    height: 100%;
+    padding: 24px 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    overflow-x: visible;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    flex-grow: 1;
+    min-height: 0;
+}
+
+.team-management-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Заголовок */
+.team-header-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.team-main-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+/* Список участников */
+.team-members-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    overflow: visible;
+}
+
+/* Карточка участника */
+.member-card-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: #FFFFFF;
+    border-radius: 24px;
+    padding: 20px 12px;
+    width: 100%;
+    box-sizing: border-box;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease;
+    overflow: visible;
+    position: relative;
+}
+
+.member-card-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Фото участника */
+.member-photo-container {
+    position: relative;
+    flex-shrink: 0;
+    overflow: visible;
+}
+
+.member-photo-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 16px;
+    object-fit: cover;
+    display: block;
+}
+
+.member-photo-placeholder {
+    width: 100px;
+    height: 100px;
+    border-radius: 16px;
+    background: #E5E7EB;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Кнопка удаления */
+.remove-member-btn {
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #000000;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    line-height: 1;
+    padding: 0;
+    z-index: 101;
+}
+
+.remove-member-btn:hover {
+    background: #DC2626;
+    transform: scale(1.1);
+}
+
+.remove-member-btn:active {
+    transform: scale(0.95);
+}
+
+/* Информация об участнике */
+.member-info-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: auto;
+    min-width: 0;
+    max-width: none;
+}
+
+.member-name-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.member-name-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #8B5CF6;
+    margin: 0;
+    word-break: break-word;
+}
+
+.crown-icon {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+}
+
+.member-role-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #8B5CF6;
+    margin: 0 0 4px 0;
+    word-break: break-word;
+}
+
+.member-telegram-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba(139, 92, 246, 0.7);
+    margin: 0;
+    word-break: break-word;
+}
+
+/* Кнопка выхода из команды */
+.leave-team-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 42px);
+    margin: 24px 21px 0 21px;
+    padding: 16px 21px;
+    background: rgba(220, 38, 38, 0.1);
+    border: 2px solid rgba(220, 38, 38, 0.4);
+    border-radius: 16px;
+    color: #DC2626;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.leave-team-button:hover {
+    background: rgba(220, 38, 38, 0.2);
+    border-color: rgba(220, 38, 38, 0.6);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+}
+
+.leave-team-button:active {
+    transform: translateY(0);
+    background: rgba(220, 38, 38, 0.25);
+}
+
+
+/* Заголовок страницы */
+.page-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin: 0 0 24px 0;
+    text-align: center;
+}
+
+/* Секция названия команды */
+.team-name-section {
+    margin-bottom: 24px;
+    position: relative;
+    z-index: 100;
+}
+
+.team-name-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.team-name-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.edit-name-icon-btn {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    color: #FFFFFF;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.edit-name-icon-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.05);
+}
+
+.team-name-edit {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    overflow: visible;
+}
+
+.team-name-input {
+    flex: 1;
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 12px;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.team-name-input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.team-name-input:focus {
+    outline: none;
+    border-color: #8B5CF6;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.edit-buttons {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.save-name-btn,
+.cancel-name-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    position: relative;
+    z-index: 101;
+}
+
+.save-name-btn {
+    background: rgba(34, 197, 94, 0.3);
+    color: #22C55E;
+    flex-shrink: 0;
+}
+
+.save-name-btn:hover {
+    background: rgba(34, 197, 94, 0.4);
+    transform: scale(1.05);
+}
+
+.cancel-name-btn {
+    background: rgba(239, 68, 68, 0.3);
+    color: #EF4444;
+}
+
+.cancel-name-btn:hover {
+    background: rgba(239, 68, 68, 0.4);
+    transform: scale(1.05);
+}
+
+/* Кнопка передачи капитанства */
+.transfer-leadership-btn {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: rgba(139, 92, 246, 0.9);
+    border: 2px solid #FFFFFF;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    z-index: 101;
+}
+
+.transfer-leadership-btn:hover {
+    background: #8B5CF6;
+    transform: scale(1.1);
+}
+
+/* Кнопка приглашения */
+.invite-team-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% - 42px);
+    margin: 16px 21px 8px 21px;
+    padding: 16px 21px;
+    background: rgba(139, 92, 246, 0.3);
+    border: 2px solid rgba(139, 92, 246, 0.6);
+    border-radius: 16px;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.invite-team-button:hover {
+    background: rgba(139, 92, 246, 0.4);
+    border-color: rgba(139, 92, 246, 0.8);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.4);
+}
+
+.invite-team-button:active {
+    transform: translateY(0);
+}
+
+/* Модальные окна */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    padding: 20px;
+}
+
+.modal-content {
+    background: rgba(30, 20, 50, 0.95);
+    backdrop-filter: blur(20px);
+    border: 2px solid rgba(139, 92, 246, 0.3);
+    border-radius: 24px;
+    padding: 32px 24px;
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.modal-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin: 0;
+    text-align: center;
+}
+
+.modal-description {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+    text-align: center;
+}
+
+.invite-link-container {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 4px;
+}
+
+.invite-link-input {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: none;
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    text-align: center;
+}
+
+.invite-link-input:focus {
+    outline: none;
+}
+
+.copy-link-button,
+.close-modal-button {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+}
+
+.copy-link-button {
+    background: #8B5CF6;
+    color: #FFFFFF;
+}
+
+.copy-link-button:hover {
+    background: #7C3AED;
+    transform: translateY(-2px);
+}
+
+.close-modal-button {
+    background: rgba(255, 255, 255, 0.1);
+    color: #FFFFFF;
+}
+
+.close-modal-button:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Модальное окно профиля участника */
+.member-profile-modal {
+    background: #FFFFFF;
+    border-radius: 24px;
+    padding: 32px 24px;
+    max-width: 400px;
+    width: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    scrollbar-width: none;
+}
+
+.member-profile-modal::-webkit-scrollbar {
+    display: none;
+}
+
+.close-profile-btn {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.1);
+    border: none;
+    color: #000000;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.close-profile-btn:hover {
+    background: rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.profile-photo-large {
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    object-fit: cover;
+    margin: 0 auto 20px;
+    display: block;
+}
+
+.profile-photo-placeholder-large {
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    background: #E5E7EB;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-name-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.profile-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #8B5CF6;
+    margin: 0;
+    text-align: center;
+}
+
+.profile-crown-badge {
+    font-size: 24px;
+    flex-shrink: 0;
+}
+
+.profile-role {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #8B5CF6;
+    margin: 0 0 24px 0;
+    text-align: center;
+}
+
+.profile-skills-section,
+.profile-description-section {
+    margin-bottom: 20px;
+}
+
+.profile-section-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #8B5CF6;
+    margin: 0 0 12px 0;
+}
+
+.profile-skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.profile-skill-tag {
+    background: rgba(139, 92, 246, 0.1);
+    border: 1px solid rgba(139, 92, 246, 0.3);
+    color: #8B5CF6;
+    padding: 8px 16px;
+    border-radius: 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.profile-description-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #374151;
+    margin: 0;
+}
+
+/* Курсор для кликабельных карточек */
+.member-card-item {
+    cursor: pointer;
+}
+
+
+/* Модальное окно выхода из команды */
+.leave-modal-content {
+    text-align: center;
+}
+
+.warning-icon-large {
+    font-size: 64px;
+    margin-bottom: 16px;
+}
+
+.modal-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+.confirm-leave-button {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    background: rgba(220, 38, 38, 0.2);
+    border: 2px solid rgba(220, 38, 38, 0.5);
+    color: #DC2626;
+}
+
+.confirm-leave-button:hover {
+    background: rgba(220, 38, 38, 0.3);
+    border-color: rgba(220, 38, 38, 0.7);
+    transform: translateY(-2px);
+}
+
+.cancel-leave-button {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    background: rgba(255, 255, 255, 0.1);
+    color: #FFFFFF;
+}
+
+.cancel-leave-button:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Кнопки действий в профиле участника */
+.profile-action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.profile-transfer-btn {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    background: rgba(139, 92, 246, 0.15);
+    border: 2px solid rgba(139, 92, 246, 0.4);
+    color: #8B5CF6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.profile-transfer-btn:hover {
+    background: rgba(139, 92, 246, 0.25);
+    border-color: rgba(139, 92, 246, 0.6);
+    transform: translateY(-2px);
+}
+
+.profile-remove-btn {
+    width: 100%;
+    padding: 14px;
+    border-radius: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    background: rgba(220, 38, 38, 0.1);
+    border: 2px solid rgba(220, 38, 38, 0.3);
+    color: #DC2626;
+}
+
+.profile-remove-btn:hover {
+    background: rgba(220, 38, 38, 0.2);
+    border-color: rgba(220, 38, 38, 0.5);
+    transform: translateY(-2px);
+}

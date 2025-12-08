@@ -1,0 +1,105 @@
+.matches-page {
+    min-height: 100vh;
+    padding: 16px;
+}
+
+.matches-container {
+    width: 100%;
+}
+
+.matches-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.matches-header h1 {
+    color: #000000;
+    font-size: 26px;
+}
+
+.back-btn {
+    background: #ffffff;
+    border: 2px solid #000000;
+    padding: 10px 18px;
+    font-size: 14px;
+    cursor: pointer;
+    color: #000000;
+}
+
+.back-btn:active {
+    background: #000000;
+    color: #ffffff;
+}
+
+.no-matches {
+    background: #ffffff;
+    border: 2px solid #000000;
+    padding: 48px 32px;
+    text-align: center;
+}
+
+.no-matches p {
+    font-size: 18px;
+    color: #000000;
+    margin-bottom: 8px;
+}
+
+.no-matches span {
+    color: #000000;
+    font-size: 14px;
+}
+
+.matches-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.match-card {
+    background: #ffffff;
+    border: 2px solid #000000;
+    padding: 18px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    cursor: pointer;
+}
+
+.match-card:active {
+    background: #000000;
+    color: #ffffff;
+}
+
+.match-info {
+    flex: 1;
+}
+
+.match-info h3 {
+    font-size: 17px;
+    color: #000000;
+    margin-bottom: 4px;
+}
+
+.match-card:active .match-info h3 {
+    color: #ffffff;
+}
+
+.match-info p {
+    color: #000000;
+    font-size: 13px;
+}
+
+.match-card:active .match-info p {
+    color: #ffffff;
+}
+
+.match-arrow {
+    font-size: 22px;
+    color: #000000;
+}
+
+.match-card:active .match-arrow {
+    color: #ffffff;
+}

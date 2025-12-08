@@ -1,0 +1,83 @@
+.questionnaire-page {
+    min-height: 100vh;
+    padding: 20px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.questionnaire-container {
+    background: #ffffff;
+    border: 2px solid #000000;
+    padding: 32px 24px;
+    width: 100%;
+}
+
+.questionnaire-container h1 {
+    font-size: 26px;
+    color: #000000;
+    margin-bottom: 6px;
+}
+
+.subtitle {
+    color: #000000;
+    margin-bottom: 24px;
+    font-size: 14px;
+}
+
+.questionnaire-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 14px 16px;
+    border: 2px solid #000000;
+    font-size: 15px;
+    background: #ffffff;
+    color: #000000;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border: 2px solid #000000;
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical;
+    font-family: inherit;
+    min-height: 100px;
+}
+
+.btn-submit {
+    padding: 16px;
+    background: #000000;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 8px;
+    border: 2px solid #000000;
+    cursor: pointer;
+}
+
+.btn-submit:active {
+    background: #ffffff;
+    color: #000000;
+}

@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #000000;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#root {
+    width: 375px;
+    height: 812px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-family: inherit;
+    -webkit-tap-highlight-color: transparent;
+}
+
+input,
+textarea,
+select {
+    font-family: inherit;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Градиентный фон с размытием */
+.gradient-blur-bg {
+    position: relative;
+    overflow: hidden;
+}
+
+.gradient-blur-bg::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 30% 50%, rgba(139, 92, 246, 0.4), transparent 50%),
+        radial-gradient(circle at 70% 50%, rgba(251, 146, 60, 0.4), transparent 50%);
+    filter: blur(60px);
+    animation: gradient-shift 8s ease infinite;
+    z-index: 0;
+}
+
+.gradient-blur-bg>* {
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes gradient-shift {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(10%, 10%);
+    }
+}
+
+/* Стеклянная карточка */
+.glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Градиентная кнопка */
+.btn-gradient {
+    background: linear-gradient(135deg, #8B5CF6 0%, #F472B6 100%);
+    color: white;
+    font-weight: 600;
+    border-radius: 9999px;
+    padding: 16px 32px;
+    min-height: 44px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 14px rgba(139, 92, 246, 0.5);
+    width: 100%;
+    font-size: 16px;
+}
+
+.btn-gradient:hover {
+    transform: scale(1.05);
+}
+
+.btn-gradient:active {
+    transform: scale(0.95);
+}
+
+/* Поле ввода */
+.input-field {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 16px;
+    transition: all 0.2s ease;
+}
+
+.input-field::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.input-field:focus {
+    border-color: #8B5CF6;
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.2);
+}
+
+.input-field:read-only {
+    background: rgba(255, 255, 255, 0.1);
+    cursor: not-allowed;
+}
+
+/* Select */
+select.input-field {
+    cursor: pointer;
+}
+
+select.input-field option {
+    background: #1a1a1a;
+    color: white;
+}
+
+/* Textarea */
+textarea.input-field {
+    resize: vertical;
+    min-height: 100px;
+}

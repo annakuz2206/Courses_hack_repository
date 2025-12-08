@@ -1,0 +1,142 @@
+.team-page {
+    min-height: 100vh;
+    background: #000000;
+    display: flex;
+    flex-direction: column;
+}
+
+.team-content {
+    flex: 1;
+    padding: 16px;
+}
+
+.team-container {
+    max-width: 375px;
+    margin: 0 auto;
+}
+
+.team-sections {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.team-header-card {
+    padding: 24px;
+}
+
+.team-name {
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.captain-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #A78BFA;
+}
+
+.members-card {
+    padding: 24px;
+}
+
+.members-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 16px;
+}
+
+.members-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.member-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.member-info {
+    flex: 1;
+}
+
+.member-name {
+    color: white;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.member-role {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.remove-btn {
+    padding: 8px 12px;
+    font-size: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 9999px;
+    background: transparent;
+    color: rgba(255, 255, 255, 0.6);
+    transition: all 0.2s ease;
+}
+
+.remove-btn:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.leave-btn {
+    width: 100%;
+    padding: 16px 32px;
+    border-radius: 9999px;
+    border: 2px solid rgba(239, 68, 68, 0.3);
+    background: transparent;
+    color: #F87171;
+    font-weight: 600;
+    font-size: 16px;
+    min-height: 44px;
+    transition: all 0.3s ease;
+}
+
+.leave-btn:hover {
+    background: rgba(239, 68, 68, 0.1);
+}
+
+.no-team {
+    padding: 32px;
+    text-align: center;
+}
+
+.no-team-icon {
+    font-size: 64px;
+    margin-bottom: 16px;
+    opacity: 0.2;
+}
+
+.no-team h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 8px;
+}
+
+.no-team p {
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 24px;
+}

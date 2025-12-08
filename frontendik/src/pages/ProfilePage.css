@@ -1,0 +1,593 @@
+@font-face {
+    font-family: 'NauryzRedKeds';
+    src: url('../assets/fonts/NauryzRedKeds.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.profile-page {
+    width: 100%;
+    min-height: 100vh;
+    background: #000000;
+    padding: 20px;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.profile-container {
+    position: relative;
+    width: 100%;
+    max-width: 335px;
+    margin: 0 auto;
+    background: #000000;
+}
+
+.form-container-profile {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 17px;
+}
+
+/* Базовый класс для всех эллипсов */
+.aurora-ellipse {
+    position: absolute;
+    pointer-events: none;
+    border-radius: 50%;
+}
+
+/* --- ГРУППА 1 (Верхняя) --- */
+.ellipse-68-top {
+    width: 257px;
+    height: 257px;
+    left: 143px;
+    top: -114px;
+    background: #A674B0;
+    filter: blur(19.6px);
+    opacity: 0.7;
+    mix-blend-mode: hard-light;
+    z-index: 1;
+}
+
+.ellipse-64-top {
+    width: 130px;
+    height: 113px;
+    left: 213px;
+    top: -34px;
+    background: #AF8FBD;
+    filter: blur(24px);
+    opacity: 0.65;
+    mix-blend-mode: hard-light;
+    z-index: 2;
+}
+
+.ellipse-66-top {
+    width: 194px;
+    height: 193px;
+    left: 192px;
+    top: -73px;
+    background: #6b176e;
+    filter: blur(14.35px);
+    opacity: 0.75;
+    mix-blend-mode: hard-light;
+    z-index: 3;
+}
+
+.ellipse-65-top {
+    width: 100px;
+    height: 100px;
+    left: 230px;
+    top: -30px;
+    background: #FFA040;
+    filter: blur(15.25px);
+    opacity: 0.75;
+    mix-blend-mode: hard-light;
+    z-index: 4;
+}
+
+.ellipse-pink-top {
+    width: 130px;
+    height: 130px;
+    left: 215px;
+    top: -40px;
+    background: #FFB6C1;
+    filter: blur(18px);
+    opacity: 0.6;
+    mix-blend-mode: hard-light;
+    z-index: 3;
+}
+
+.ellipse-orange-small-top {
+    width: 80px;
+    height: 80px;
+    left: 240px;
+    top: -20px;
+    background: #FFA040;
+    filter: blur(15px);
+    opacity: 0.8;
+    mix-blend-mode: hard-light;
+    z-index: 5;
+}
+
+/* --- ГРУППА 2 (Средняя) --- */
+.ellipse-68-mid {
+    width: 220px;
+    height: 280px;
+    left: -60px;
+    top: 200px;
+    background: #A674B0;
+    filter: blur(19.6px);
+    opacity: 0.7;
+    mix-blend-mode: hard-light;
+    z-index: 1;
+}
+
+.ellipse-64-mid {
+    width: 70.6px;
+    height: 73.87px;
+    left: 13.14px;
+    top: 265.3px;
+    background: #6b176e;
+    filter: blur(24px);
+    opacity: 1;
+    mix-blend-mode: hard-light;
+    z-index: 10;
+}
+
+.ellipse-66-mid {
+    width: 126.82px;
+    height: 126.16px;
+    left: -14.97px;
+    top: 239.8px;
+    background: #FFB6C1;
+    filter: blur(14.35px);
+    opacity: 0.6;
+    mix-blend-mode: hard-light;
+    z-index: 3;
+}
+
+.ellipse-65-mid {
+    width: 96.75px;
+    height: 100.67px;
+    left: -1.24px;
+    top: 254.84px;
+    background: #FFA040;
+    filter: blur(15.25px);
+    opacity: 0.75;
+    mix-blend-mode: hard-light;
+    z-index: 4;
+}
+
+.ellipse-orange-small-mid {
+    width: 70px;
+    height: 70px;
+    left: -20px;
+    top: 240px;
+    background: #FFA040;
+    filter: blur(15px);
+    opacity: 0.8;
+    mix-blend-mode: hard-light;
+    z-index: 5;
+}
+
+/* --- ГРУППА 3 (Нижняя) --- */
+.ellipse-68-bot {
+    width: 262.94px;
+    height: 232px;
+    left: 71.5px;
+    top: 388px;
+    background: #A674B0;
+    filter: blur(19.6px);
+    opacity: 0.3;
+    mix-blend-mode: hard-light;
+    z-index: 1;
+}
+
+.ellipse-64-bot {
+    width: 70.6px;
+    height: 73.87px;
+    left: 13.14px;
+    top: 365px;
+    background: #AF8FBD;
+    filter: blur(24px);
+    opacity: 0.4;
+    mix-blend-mode: hard-light;
+    z-index: 2;
+}
+
+.ellipse-67-bot {
+    width: 196px;
+    height: 196px;
+    left: 113px;
+    top: 395px;
+    background: #5c1b45;
+    filter: blur(16.15px);
+    opacity: 0.35;
+    mix-blend-mode: hard-light;
+    z-index: 2;
+}
+
+.ellipse-66-bot {
+    width: 194px;
+    height: 193px;
+    left: 124px;
+    top: 404px;
+    background: #FFBC69;
+    filter: blur(14.35px);
+    opacity: 0.35;
+    mix-blend-mode: hard-light;
+    z-index: 3;
+}
+
+.ellipse-65-bot {
+    width: 148px;
+    height: 172px;
+    left: 145px;
+    top: 409px;
+    background: #F0444A;
+    filter: blur(15.25px);
+    opacity: 0.4;
+    mix-blend-mode: hard-light;
+    z-index: 4;
+}
+
+.ellipse-68-bottom {
+    width: 320px;
+    height: 320px;
+    left: 50px;
+    top: 480px;
+    background: #A674B0;
+    filter: blur(19.6px);
+    opacity: 0.5;
+    mix-blend-mode: hard-light;
+    z-index: 1;
+}
+
+.ellipse-orange-small-bot {
+    width: 100px;
+    height: 100px;
+    left: 115px;
+    top: 510px;
+    background: #FFB870;
+    filter: blur(25px);
+    opacity: 0.85;
+    mix-blend-mode: hard-light;
+    z-index: 5;
+}
+
+.ellipse-68-top-right {
+    width: 257px;
+    height: 257px;
+    left: 200px;
+    top: -150px;
+    background: #A674B0;
+    filter: blur(19.6px);
+    opacity: 0.5;
+    mix-blend-mode: hard-light;
+    z-index: 1;
+}
+
+/* Стеклянная карточка */
+.glass-card-profile {
+    position: relative;
+    width: 100%;
+    max-width: 335px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 0;
+    background: transparent;
+    backdrop-filter: none;
+    border: none;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* Заголовок */
+.profile-title {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.2;
+    color: #AE00FF;
+    margin: 0 0 20px 0;
+    text-align: center;
+}
+
+/* Форма */
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+/* Поле формы */
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+/* Лейбл */
+.field-label {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+/* Glass Input */
+.glass-input {
+    width: 100%;
+    height: 44px;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    padding: 12px;
+    outline: none;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    line-height: 1.4;
+}
+
+/* Поле для навыков - увеличенная высота */
+.glass-input.skills-input {
+    height: 88px;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 12px;
+    vertical-align: top;
+}
+
+.glass-input.skills-input::placeholder {
+    vertical-align: top;
+    line-height: 1.4;
+}
+
+.glass-input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.glass-input:focus {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.glass-input:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Select */
+.glass-select {
+    appearance: none !important;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
+    background-color: rgba(0, 0, 0, 0.2) !important;
+    backdrop-filter: blur(10px) !important;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='white' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E") !important;
+    background-repeat: no-repeat !important;
+    background-position: right 12px center !important;
+    padding-right: 40px !important;
+    cursor: pointer !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 12px !important;
+    color: #FFFFFF !important;
+}
+
+.glass-select:focus {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+.custom-select-wrapper {
+    position: relative;
+}
+
+.glass-select option {
+    background: #000000 !important;
+    color: white !important;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.glass-select option:checked {
+    background: #000000 !important;
+    color: white !important;
+}
+
+.glass-select option:first-child {
+    border-radius: 12px 12px 0 0;
+}
+
+.glass-select option:last-child {
+    border-radius: 0 0 12px 12px;
+}
+
+/* Стилизация для Firefox */
+@-moz-document url-prefix() {
+    .glass-select option {
+        background: #000000 !important;
+        color: white !important;
+    }
+}
+
+/* Стилизация для WebKit (Chrome, Safari) */
+@supports (-webkit-appearance: none) {
+    .glass-select option {
+        background: #000000 !important;
+        color: white !important;
+    }
+
+    .glass-select option:hover {
+        background: rgba(170, 0, 255, 0.3) !important;
+    }
+}
+
+/* Textarea */
+.glass-textarea {
+    min-height: 80px;
+    height: auto;
+    padding: 12px;
+    resize: vertical;
+}
+
+/* Слайдер уверенности */
+.confidence-slider {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.slider-label {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.glass-slider {
+    width: 100%;
+    height: 6px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    outline: none;
+    -webkit-appearance: none;
+}
+
+.glass-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #AE00FF;
+    cursor: pointer;
+}
+
+.glass-slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #AE00FF;
+    cursor: pointer;
+    border: none;
+}
+
+/* Навыки */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 6px;
+}
+
+.skill-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(170, 0, 255, 0.3);
+    border: 1px solid rgba(170, 0, 255, 0.5);
+    border-radius: 10px;
+    padding: 4px 10px;
+    color: white;
+    font-size: 12px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.remove-skill {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0;
+    line-height: 1;
+    transition: color 0.2s;
+}
+
+.remove-skill:hover {
+    color: #ff4444;
+}
+
+/* Загрузка файла */
+.glass-file-input {
+    display: none;
+}
+
+.file-upload-btn {
+    display: inline-block;
+    width: 100%;
+    height: 44px;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: #FFFFFF;
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.file-upload-btn:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Кнопка отправки */
+.submit-btn {
+    width: 100%;
+    height: 44px;
+    background: rgba(170, 0, 255, 0.5);
+    border-radius: 12px;
+    border: none;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 8px;
+}
+
+.submit-btn:hover {
+    background: rgba(170, 0, 255, 0.7);
+    transform: translateY(-2px);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* Скроллбар - скрыт */
+.glass-card-profile {
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+}
+
+.glass-card-profile::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera */
+}
