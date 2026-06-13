@@ -81,7 +81,7 @@ npm run dev
 Participant(id, role, skills, hackathonId)   # Участник
 Team(id, captainId, lookingForRoles)         # Команда
 ```
-## 🔄 Поток пользователя:
+## Поток пользователя:
 1. Вход (Telegram/JWT) → 2. Заполнение профиля → 
 3. Поиск команд/участников → 4. Свайпы (влево/вправо) → 
 5. Мэтчи при взаимных лайках → 6. Чат в мэтчах
@@ -101,7 +101,7 @@ Team(id, captainId, lookingForRoles)         # Команда
 - 3 участника в Feed
 - 2 мэтча в MatchList
 
-## 🔄 Новый Flow
+## Новый Flow
 
 См. подробности в `NEW_FLOW.md`
 
@@ -121,6 +121,4 @@ Team(id, captainId, lookingForRoles)         # Команда
 
 См. подробности в `IPHONE_LAYOUT.md`
 
----
 
-**Сделано за 1-2 дня** 🚀
